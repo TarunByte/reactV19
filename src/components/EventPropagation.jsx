@@ -11,16 +11,17 @@ export const EventPropagation = () => {
 
   const handleChildClick = (event) => {
     console.log(event);
+    event.stopPropagation();
     console.log("Child clicked");
   };
 
   return (
     <section className="main-div">
-      <div className="g-div" onClick={handleGrandParent}>
-        <div className="p-div" onClick={handleParentClick}>
-          <div className="c-div" onClick={handleChildClick}>
+      <div className="g-div" onClickCapture={handleGrandParent}>
+        <div className="p-div" onClickCapture={handleParentClick}>
+          <button className="c-div" onClickCapture={handleChildClick}>
             Child Div
-          </div>
+          </button>
         </div>
       </div>
     </section>
