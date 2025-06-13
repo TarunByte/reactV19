@@ -1,4 +1,4 @@
-import { DerivedState } from "./components/hooks/DerivedState";
+import { DerivedState } from "./components/DerivedState";
 import "./components/EV.css";
 
 export const App = () => {
