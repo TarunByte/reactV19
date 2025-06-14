@@ -1,10 +1,10 @@
-import { DerivedState } from "./components/DerivedState";
 import "./components/EV.css";
+import { LiftingState } from "./components/LiftStateUp";
 
 export const App = () => {
   return (
     <section className="container">
-      <DerivedState />
+      <LiftingState />
     </section>
   );
 };
