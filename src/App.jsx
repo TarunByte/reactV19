@@ -1,11 +1,10 @@
-import "./components/EV.css";
-// import { LiftingState } from "./components/LiftStateUp";
-import { ToggleSwitch } from "./projects/ToggleSwitch/ToggleSwitch";
+// import "./components/EV.css";
+import { Todo } from "./projects/Todo/Todo";
 
 export const App = () => {
   return (
-    <section className="container">
-      <ToggleSwitch />
+    <section>
+      <Todo />
     </section>
   );
 };
