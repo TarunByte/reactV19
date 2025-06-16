@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdCheck, MdDeleteForever } from "react-icons/md";
 import "./Todo.css";
 export const Todo = () => {
   const [inputValue, setInputValue] = useState("");
   const [task, setTask] = useState([]);
+  const [dateTime, setDateTime] = useState("");
 
   const handleInputChange = (value) => {
     setInputValue(value);
@@ -23,10 +24,38 @@ export const Todo = () => {
     setInputValue("");
   };
 
+  //todo Date and TIme
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      const formattedDate = now.toLocaleDateString();
+      const formattedTime = now.toLocaleTimeString();
+
+      setDateTime(`${formattedDate} - ${formattedTime}`);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  //todo handleDelete function
+  const handleDeleteTodo = (value) => {
+    console.log(task);
+    console.log(value);
+    const updatedTask = task.filter((curTask) => curTask !== value);
+    setTask(updatedTask);
+  };
+
+  //todo handleClearTodoData functionality
+  const handleClearTodoData = () => {
+    setTask([]);
+  };
+
   return (
     <section className="todo-container">
       <header>
         <h1>Todo List</h1>
+        <h2 className="date-time">{dateTime}</h2>
       </header>
       <section className="form">
         <form onSubmit={handleFormSubmit}>
@@ -55,13 +84,21 @@ export const Todo = () => {
                 <button className="check-btn">
                   <MdCheck />
                 </button>
-                <button className="delete-btn">
+                <button
+                  className="delete-btn"
+                  onClick={() => handleDeleteTodo(curTask)}
+                >
                   <MdDeleteForever />
                 </button>
               </li>
             );
           })}
         </ul>
+      </section>
+      <section>
+        <button className="clear-btn" onClick={handleClearTodoData}>
+          Clear all
+        </button>
       </section>
     </section>
   );
