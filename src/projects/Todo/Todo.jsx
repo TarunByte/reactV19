@@ -8,24 +8,44 @@ export const Todo = () => {
   const [task, setTask] = useState([]);
 
   const handleFormSubmit = (inputValue) => {
-    if (!inputValue) return;
-    if (task.includes(inputValue)) return;
-    setTask((prevTask) => [...prevTask, inputValue]);
+    const { id, content, checked } = inputValue;
+
+    // to check if the input field is empty or not
+    if (!content) return;
+
+    // to check if the data is already existing or not
+    // if (task.includes(inputValue)) return;
+    const ifTodoContentMatched = task.find(
+      (curTask) => curTask.content === content
+    );
+    if (ifTodoContentMatched) return;
+
+    setTask((prevTask) => [...prevTask, { id, content, checked }]);
   };
 
   //todo Date and TIme
 
   //todo handleDelete function
   const handleDeleteTodo = (value) => {
-    console.log(task);
-    console.log(value);
-    const updatedTask = task.filter((curTask) => curTask !== value);
+    const updatedTask = task.filter((curTask) => curTask.content !== value);
     setTask(updatedTask);
   };
 
   //todo handleClearTodoData functionality
   const handleClearTodoData = () => {
     setTask([]);
+  };
+
+  //todo handleCheckedTodo functionality
+  const handleCheckedTodo = (value) => {
+    const updatedTask = task.map((curTask) => {
+      if (curTask.content === value) {
+        return { ...curTask, checked: !curTask.checked };
+      } else {
+        return curTask;
+      }
+    });
+    setTask(updatedTask);
   };
 
   return (
@@ -39,12 +59,14 @@ export const Todo = () => {
 
       <section className="myUnOrdList">
         <ul>
-          {task.map((curTask, index) => {
+          {task.map((curTask) => {
             return (
               <TodoList
-                key={index}
-                data={curTask}
+                key={curTask.id}
+                data={curTask.content}
+                checked={curTask.checked}
                 onHandledDeleteTodo={handleDeleteTodo}
+                onHandledCheckedTodo={handleCheckedTodo}
               />
             );
           })}
