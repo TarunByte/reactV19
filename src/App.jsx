@@ -1,7 +1,8 @@
-// import "./components/EV.css";
-import { Keys } from "./Keys";
+import "./components/EV.css";
+import ShortCircuitExample from "./components/hooks/ShortCircuit";
+// import { Keys } from "./Keys";
 // import { Todo } from "./projects/Todo/Todo";
 
 export const App = () => {
-  return <Keys />;
+  return <section> {<ShortCircuitExample />}</section>;
 };
