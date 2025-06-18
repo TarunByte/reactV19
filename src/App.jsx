@@ -1,10 +1,7 @@
 // import "./components/EV.css";
-import { Todo } from "./projects/Todo/Todo";
+import { Keys } from "./Keys";
+// import { Todo } from "./projects/Todo/Todo";
 
 export const App = () => {
-  return (
-    <section>
-      <Todo />
-    </section>
-  );
+  return <Keys />;
 };
