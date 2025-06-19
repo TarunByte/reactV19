@@ -1,5 +1,5 @@
-import { RegistrationFormReact } from "./components/hooks/useState/RegistrationReact";
+import { LoginForm } from "./components/hooks/useState/LoginForm";
 
 export const App = () => {
-  return <RegistrationFormReact />;
+  return <LoginForm />;
 };
