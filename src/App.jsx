@@ -1,6 +1,6 @@
 import "./components/EV.css";
-import CounterChallenge from "./components/hooks/useState/Challenge";
+import { ControlledForm } from "./components/hooks/useState/Controlled";
 
 export const App = () => {
-  return <CounterChallenge />;
+  return <ControlledForm />;
 };
