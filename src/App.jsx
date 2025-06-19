@@ -1,6 +1,6 @@
-import "./components/EV.css";
-import { ControlledForm } from "./components/hooks/useState/Controlled";
+// import "./components/EV.css";
+import { RegistrationForm } from "./components/hooks/useState/Registration";
 
 export const App = () => {
-  return <ControlledForm />;
+  return <RegistrationForm />;
 };
