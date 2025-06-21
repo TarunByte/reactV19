@@ -1,5 +1,5 @@
-import { ContactForm } from "./components/hooks/useState/ContactForm";
+import { ReactUseEffect } from "./components/hooks/useEffect";
 
 export const App = () => {
-  return <ContactForm />;
+  return <ReactUseEffect />;
 };
