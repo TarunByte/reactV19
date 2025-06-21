@@ -1,5 +1,5 @@
-import { ReactUseEffect } from "./components/hooks/useEffect";
+import { Challenge } from "./components/hooks/useEffect/EffectChallenge";
 
 export const App = () => {
-  return <ReactUseEffect />;
+  return <Challenge />;
 };
