@@ -1,5 +1,5 @@
-import { CleanUp } from "./components/hooks/useEffect/CleanUp";
+import { HowNotToFetchApi } from "./components/hooks/useEffect/HowNotToFetchApi";
 
 export const App = () => {
-  return <CleanUp />;
+  return <HowNotToFetchApi />;
 };
