@@ -1,5 +1,5 @@
-import { Challenge } from "./components/hooks/useEffect/EffectChallenge";
+import { CleanUp } from "./components/hooks/useEffect/CleanUp";
 
 export const App = () => {
-  return <Challenge />;
+  return <CleanUp />;
 };
