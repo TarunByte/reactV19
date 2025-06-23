@@ -28,7 +28,7 @@ h6 {
 
 p,
 span {
-  list-style: none;
+  font-size: 1.6rem;
 }
 
 li {
@@ -42,6 +42,15 @@ span {
 .container {
   max-width: 152rem;
   margin: auto;
+}
+
+.grid-three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  text-align: center;
+  margin: 3.2rem 0;
+  align-items: end;
 }
 
 header {
@@ -98,4 +107,8 @@ figure {
   display: flex;
   justify-content: center;
   filter: drop-shadow(0px 50px 100px rgba(50, 50, 93, 0.25));
+}
+
+pokemon-info {
+  text-align: center;
 }
