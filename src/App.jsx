@@ -1,5 +1,5 @@
-import { HowNotToFetchApi } from "./components/hooks/useEffect/HowNotToFetchApi";
+import { UseRef } from "./components/hooks/useRefs";
 
 export const App = () => {
-  return <HowNotToFetchApi />;
+  return <UseRef />;
 };
