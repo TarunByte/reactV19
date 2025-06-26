@@ -1,6 +1,6 @@
 // import { UseRef } from "./components/hooks/useRefs";
-import { ForwardRefs } from "./components/hooks/useRefs/ForwardRef";
+import { UseId } from "./components/hooks/UseID";
 
 export const App = () => {
-  return <ForwardRefs />;
+  return <UseId />;
 };
