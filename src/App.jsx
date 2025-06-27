@@ -1,6 +1,12 @@
-// import { UseId } from "./components/hooks/UseID";
-import { ParentComponent } from "./components/PropDrilling";
+import { BioProvider } from "./components/hooks/ContextAPI";
+import { About } from "./components/hooks/ContextAPI/About";
+import { Home } from "./components/hooks/ContextAPI/home";
 
 export const App = () => {
-  return <ParentComponent />;
+  return (
+    <BioProvider>
+      <Home />
+      <About />
+    </BioProvider>
+  );
 };
