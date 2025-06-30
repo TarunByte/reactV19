@@ -1,9 +1,9 @@
-import { ReducerComp } from "./components/hooks/UseReducer";
+import { ReactMemo } from "./components/hooks/Memo/ReactMemo";
 
 export const App = () => {
   return (
     <>
-      <ReducerComp />
+      <ReactMemo />
     </>
   );
 };
