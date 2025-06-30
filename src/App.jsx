@@ -1,9 +1,9 @@
-import MemoParentComponent from "./components/hooks/Memo/UseMemo";
+import { ReactMemo } from "./components/hooks/Memo/ReactMemo";
 
 export const App = () => {
   return (
     <>
-      <MemoParentComponent />
+      <ReactMemo />
     </>
   );
 };
