@@ -1,9 +1,9 @@
-import { ReactMemo } from "./components/hooks/Memo/ReactMemo";
+import UseCallback from "./components/hooks/Memo/UseCallback";
 
 export const App = () => {
   return (
     <>
-      <ReactMemo />
+      <UseCallback />
     </>
   );
 };
